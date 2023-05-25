@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body{
+    background-color: aquamarine;
+}
+
+    .main{
+
+         border: 1px black solid;
+   background-color: rgb(138, 247, 65);
+   border-style: none;
+ }
+ #show{
+    padding: 8px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 229, 255);
+    border-style: none;
+    margin-left: 400px;
+    margin-top: -15px;
+ }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>What is HTML ?</h2>
+    <p id="para">he HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser <span id="more">  It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</span></p>
+    <button onclick="more()" id="show"> See More</button>
+</div>
+
+    <script>
+
+
+   var see = document.getElementById('more');
+   var inner = see.innerHTML;
+   function more(){
+
+    if(see.style.display == 'none'){
+        see.innerHTML= inner
+        see.style.display= "inline";
+        document.getElementById("show").innerHTML= "See Less"
+    }
+    else{
+        see.innerHTML=inner + ".....";
+        see.style.display="none";
+        document.getElementById("show").innerHTML= "See More"
+    }
+
+   }
+
+    </script>
+</body>
+</html>
